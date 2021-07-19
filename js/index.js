@@ -150,3 +150,128 @@ const carJson =
 }`;
 const carFromJson = JSON.parse(carJson);
 console.log(carFromJson);
+
+//let userName = prompt('your name?', '');
+//let isTeaWanted = confirm('you want tea?');
+
+//alert('user:' + userName);
+//alert('tea:' + isTeaWanted);
+
+
+/*Напишите код, выполнив задание из каждого пункта отдельной строкой:
+
+Создайте пустой объект user.
+Добавьте свойство name со значением John.
+Добавьте свойство surname со значением Smith.
+Измените значение свойства name на Pete.
+Удалите свойство name из объекта.*/
+
+let user = {};
+user.name = "John";
+user.surname = "Smith";
+user.name = "Pate";
+delete user.name;
+
+
+//Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+
+function isEmpty(obj) {
+  for (let key in obj) {
+    return false;
+  }
+  return true;
+}
+
+//У нас есть объект, в котором хранятся зарплаты нашей команды:
+//Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
+//Если объект salaries пуст, то результат должен быть 0.
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pate: 130,
+};
+
+ let sum = 0;
+ for (let key in salaries) {
+   sum += salaries[key];
+ }
+ //alert(sum);
+ 
+
+ //Создайте объект calculator (калькулятор) с тремя методами:
+//read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
+//sum() (суммировать) возвращает сумму сохранённых значений.
+//mul() (умножить) перемножает сохранённые значения и возвращает результат
+
+let calculator = {
+  sum() {
+    return this.a + this.b;
+  },
+
+  mul() {
+    return this.a * this.b;
+    },
+
+    read() {
+      this.a = +prompt('a?', 0);
+      this.b = +prompt('b?', 0);
+    }
+};
+
+//calculator.read();
+//alert( calculator.sum() );
+//alert( calculator.mul() );
+
+
+//calculator з використаням new
+
+function Calculator() {
+
+  this.read = function() {
+    this.a = +prompt('a?', 0);
+    this.b = +prompt('b?', 0);
+  };
+
+  this.sum = function() {
+    return this.a + this.b;
+  };
+
+  this.mul = function() {
+    return this.a * this.b;
+  };
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+//alert( "Sum=" + calculator.sum() );
+//alert( "Mul=" + calculator.mul() );
+
+//Это ladder (лестница) – объект, который позволяет подниматься вверх и спускаться:
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+
+  down() {
+    this.step--;
+    return this;
+  },
+
+  showStep() {
+    alert(this.step);
+    return this;
+  }
+}
+
+//ladder
+  //.up()
+  //.up()
+  //.down()
+  //.up()
+  //.down()
+  //.showStep();
