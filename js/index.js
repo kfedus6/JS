@@ -43,13 +43,13 @@ while (i <= 25) {
 
 
 //let num = parseFloat(prompt('Enter a number'));
-  //while (isNaN(num)) {
-    //num = parseFloat(prompt('Enter a number'));
+//while (isNaN(num)) {
+//num = parseFloat(prompt('Enter a number'));
 //}
 
 //let num;
-  //do {
-    //num = parseFloat(prompt('Enter a number'));
+//do {
+//num = parseFloat(prompt('Enter a number'));
 //} while (isNaN(num));
 
 /*const cars = ['Tesla X', 'Tesla Y', 'Tesla S', 'Tesla 3'];
@@ -87,21 +87,21 @@ teslaS.make = 'Tesla';
 teslaS.model = 'S';
 teslaS.color = 'bluo';
 teslaS.price = 1750000;
-teslaS.beep = function() {
-  console.log('Tesla S beep');
+teslaS.beep = function () {
+   console.log('Tesla S beep');
 }
 
 console.log(teslaS);
 teslaS.beep();
 
 const porscheTaycan = {
-  make: 'Porsche',
-  model: 'Taycan',
-  color: 'yellow',
-  price: 240000,
-  beep: function() {
-    console.log('Porsche Taycan beep');
-  }
+   make: 'Porsche',
+   model: 'Taycan',
+   color: 'yellow',
+   price: 240000,
+   beep: function () {
+      console.log('Porsche Taycan beep');
+   }
 };
 
 console.log(porscheTaycan);
@@ -109,31 +109,31 @@ porscheTaycan.beep();
 
 
 function Car(make, model, color, price) {
-  this.make = make;
-  this.model = model;
-  this.color = color;
-  this.price = price;
+   this.make = make;
+   this.model = model;
+   this.color = color;
+   this.price = price;
 }
- Car.prototype.beep = function() {
-  console.log(`${this.make} ${this.model} beep`);
+Car.prototype.beep = function () {
+   console.log(`${this.make} ${this.model} beep`);
 }
 const mercedesG = new Car('Mercedes', 'G', 'black', 280000);
 console.log(mercedesG);
-mercedesG.beep(); 
+mercedesG.beep();
 const audiA7 = new Car('Audi', 'A7', 'white', 95000);
 console.log(audiA7);
 audiA7.beep();
 
 class SuperCar {
-  constructor(make, model, color, price) {
-    this.make = make;
-    this.model = model;
-    this.color = color;
-    this.price = price;
-  }
-  beep() {
-    console.log(`${this.make} ${this.model} beep`);
-  }
+   constructor(make, model, color, price) {
+      this.make = make;
+      this.model = model;
+      this.color = color;
+      this.price = price;
+   }
+   beep() {
+      console.log(`${this.make} ${this.model} beep`);
+   }
 }
 const ferrari = new SuperCar('Ferrari', '812 Superfast', 'red', 700000);
 const ferrarif8 = new SuperCar('Ferrari', 'F8 Tributo', 'green', 600000);
@@ -142,7 +142,7 @@ console.log(ferrarif8);
 
 
 const carJson =
-`{ 
+   `{ 
   "make": "Ford",
   "model": "Raptor",
   "color": "black",
@@ -197,9 +197,9 @@ delete user.name;
    sum += salaries[key];
  }
  alert(sum);*/
- 
 
- //Создайте объект calculator (калькулятор) с тремя методами:
+
+//Создайте объект calculator (калькулятор) с тремя методами:
 //read() (читать) запрашивает два значения и сохраняет их как свойства объекта.
 //sum() (суммировать) возвращает сумму сохранённых значений.
 //mul() (умножить) перемножает сохранённые значения и возвращает результат
@@ -275,3 +275,66 @@ ladder
   .up()
   .down()
   .showStep();*/
+
+//Создайте скрипт, который запрашивает ввод двух чисел (используйте prompt) и после показывает их сумму.
+
+/*let a = +prompt("Введите первое число", "");
+let b = +prompt("Введите первое число", "");
+
+alert(a + b);*/
+
+//Методы Math.round и toFixed, согласно документации, округляют до ближайшего целого числа:
+// 0..4 округляется в меньшую сторону, тогда как 5..9 в большую сторону.
+
+//Но почему в примере ниже 6.35 округляется до 6.3?
+
+//alert( 6.35.toFixed(1) ); // 6.3
+
+//Как правильно округлить 6.35?
+
+//alert( (6.35 * 10).toFixed(20) ); // 63.50000000000000000000
+
+//alert( Math.round(6.35 * 10) / 10); // 6.35 -> 63.5 -> 64(rounded) -> 6.4
+
+
+//Создайте функцию readNumber, которая будет запрашивать ввод числового значения до тех пор, пока посетитель его не введёт.
+//Функция должна возвращать числовое значение.
+//Также надо разрешить пользователю остановить процесс ввода, отправив пустую строку или нажав «Отмена». В этом случае функция должна вернуть null.
+
+/*function readNumber() {
+   let num;
+
+   do {
+      num = prompt("Введите число", 0);
+   } while (!isFinite(num));
+
+   if (num === null || num === '') return null;
+
+   return +num;
+}
+
+alert(`Число: ${readNumber()}`);*/
+
+//Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
+//Любое число из интервала min..max должно появляться с одинаковой вероятностью.
+
+//1 function
+/*function randomInteger(min, max) {
+   let rand = min - 0.5 + Math.random() * (max - min + 1);
+   return Math.round(rand);
+}
+
+alert(randomInteger(1, 100));
+alert(randomInteger(1, 100));
+alert(randomInteger(1, 100));*/
+
+//2 function
+
+/*function randomInteger(min, max) {
+   let rand = min + Math.random() * (max + 1 - min);
+   return Math.floor(rand);
+}
+
+alert(randomInteger(1, 100));
+alert(randomInteger(1, 100));
+alert(randomInteger(1, 100));*/

@@ -1,11 +1,11 @@
 h1 {
-   color: blue;
+  color: blue;
 }
 
 .bar {
-   background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 .bar__drink {
-   color: chartreuse;
+  color: chartreuse;
 }
