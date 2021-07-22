@@ -4,8 +4,7 @@ h1 {
 
 .bar {
    background-color: blueviolet;
-}
-
-.bar__drink {
-   color: chartreuse;
+   &__drink {
+      color: chartreuse;
+   }
 }

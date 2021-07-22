@@ -175,18 +175,18 @@ delete user.name;
 
 //Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
 
-function isEmpty(obj) {
+/*function isEmpty(obj) {
   for (let key in obj) {
     return false;
   }
   return true;
-}
+}*/
 
 //У нас есть объект, в котором хранятся зарплаты нашей команды:
 //Напишите код для суммирования всех зарплат и сохраните результат в переменной sum. Должно получиться 390.
 //Если объект salaries пуст, то результат должен быть 0.
 
-let salaries = {
+/*let salaries = {
   John: 100,
   Ann: 160,
   Pate: 130,
@@ -196,7 +196,7 @@ let salaries = {
  for (let key in salaries) {
    sum += salaries[key];
  }
- //alert(sum);
+ alert(sum);*/
  
 
  //Создайте объект calculator (калькулятор) с тремя методами:
@@ -204,7 +204,7 @@ let salaries = {
 //sum() (суммировать) возвращает сумму сохранённых значений.
 //mul() (умножить) перемножает сохранённые значения и возвращает результат
 
-let calculator = {
+/*let calculator = {
   sum() {
     return this.a + this.b;
   },
@@ -219,14 +219,14 @@ let calculator = {
     }
 };
 
-//calculator.read();
-//alert( calculator.sum() );
-//alert( calculator.mul() );
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );*/
 
 
 //calculator з використаням new
 
-function Calculator() {
+/*function Calculator() {
 
   this.read = function() {
     this.a = +prompt('a?', 0);
@@ -245,12 +245,12 @@ function Calculator() {
 let calculator = new Calculator();
 calculator.read();
 
-//alert( "Sum=" + calculator.sum() );
-//alert( "Mul=" + calculator.mul() );
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );*/
 
 //Это ladder (лестница) – объект, который позволяет подниматься вверх и спускаться:
 
-let ladder = {
+/*let ladder = {
   step: 0,
   up() {
     this.step++;
@@ -268,10 +268,10 @@ let ladder = {
   }
 }
 
-//ladder
-  //.up()
-  //.up()
-  //.down()
-  //.up()
-  //.down()
-  //.showStep();
+ladder
+  .up()
+  .up()
+  .down()
+  .up()
+  .down()
+  .showStep();*/
