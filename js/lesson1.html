@@ -1,0 +1,63 @@
+<html>
+
+<head>
+   <meta charset="UTF-8">
+</head>
+
+<body>
+   <div id="cont">
+   </div>
+   <table>
+   </table>
+
+   <script>
+
+      //переменная, созданная с помощью ключевого слова let имеет локальную область видимости
+      //переменная, созданная с помощью ключевого слова var имеет глобальную область видимости
+      let n = 5
+      if (n == 5) {
+         var n1 = 7
+      }
+      console.log(n1)
+
+      //создание элемента html-страницы
+      let b = document.createElement('button')
+      //вставка текста в тег html
+      b.textContent = "Click"
+      //получение элемента html - страницы
+      let cont = document.querySelector('#cont')
+      //вставка элемента внутрь другого 
+      cont.append(b)
+      //func передается в функцию как объект и вызывается под капотом функции addEventListener(call back - функция обратного вызова)
+      b.addEventListener('click', func)
+      function func() {
+         if (b.style.background == 'yellow') {
+            b.style.background = 'green'
+         }
+         else {
+            b.style.background = 'yellow'
+         }
+      }
+
+      let products = [{ name: 'Milk', price: 20 }, { name: 'Apple', price: 10 },
+      { name: 'Kefir', price: 21 }]
+      products.forEach(createStr)
+
+
+      function createStr(product) {
+         let tr = document.createElement('tr')
+         let td1 = document.createElement('td')
+         td1.textContent = product.name
+         let td2 = document.createElement('td')
+         td2.textContent = product.price
+         tr.append(td1)
+         tr.append(td2)
+         document.querySelector('table').append(tr)
+
+
+      }
+
+   </script>
+</body>
+
+</html>
