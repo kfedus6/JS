@@ -5,6 +5,8 @@
 </head>
 
 <body>
+   <div id="header">
+   </div>
    <div id="cont">
    </div>
    <table>
@@ -53,9 +55,12 @@
          tr.append(td1)
          tr.append(td2)
          document.querySelector('table').append(tr)
-
-
-      }
+      };
+      let h = document.createElement('h1')
+      h.textContent = "Hello Kolya"
+      let header = document.querySelector('#header')
+      header.append(h)
+      h.style.color = 'blue'
 
    </script>
 </body>
