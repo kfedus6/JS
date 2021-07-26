@@ -7,7 +7,7 @@
 alert('hello ' + username);
 
 const userage = parseFloat(prompt('enter your age'));
-alert('your age is ' + userage); 
+alert('your age is ' + userage);
 
 const nextage = add(userage, 1);
 alert('next year you will be ' + nextage);
@@ -34,7 +34,7 @@ for (let counter = 2; counter <= 50; counter += 2) {
     console.log(counter);
 }*/
 
-/*цикл з передумовою 
+/*цикл з передумовою
 let i = 0;
 while (i <= 25) {
     console.log(i);
@@ -60,9 +60,16 @@ console.log(cars);
 
 cars.sort();
   for (let i = 0; i < cars.length; i++) {
-       console.log(i+1, cars[i]); 
+       console.log(i+1, cars[i]);
 }*/
 
+/*let nums = [1, 3, 5, 6, 12, 33, 32, 44, 51, 2, 8, 9];
+let result = nums.reduce((sum, current) => sum + current, 0);
+alert(result);*/
+
+/*let nums = [1, 3, 5, 6, 12, 33, 32, 44, 51, 2, 8, 9];
+nums.reverse();
+alert(nums);*/
 
 /*let nums = [1, 23, 44, 32, 24, 54, 77, 3, 45, 62];
 nums.sort(compare);
@@ -78,11 +85,16 @@ nums.sort(function(a, b) {
 });
 console.log(nums);*/
 
-//let nums = [1, 23, 44, 32, 24, 54, 77, 3, 45, 62];
-//nums.sort( (a, b) => a - b);
-//console.log(nums);
+/*let nums = [1, 23, 44, 32, 24, 54, 77, 3, 45, 62];
+nums.sort((a, b) => a - b);
+console.log(nums);*/
 
-const teslaS = {};
+
+/*let arr = [5, 2, 1, -10, 8, 22, 12, 45, 32, 12, 56, -45];
+arr.sort((a, b) => b - a);
+alert(arr);*/
+
+/*const teslaS = {};
 teslaS.make = 'Tesla';
 teslaS.model = 'S';
 teslaS.color = 'bluo';
@@ -142,7 +154,7 @@ console.log(ferrarif8);
 
 
 const carJson =
-   `{ 
+   `{
   "make": "Ford",
   "model": "Raptor",
   "color": "black",
@@ -155,7 +167,7 @@ console.log(carFromJson);
 //let isTeaWanted = confirm('you want tea?');
 
 //alert('user:' + userName);
-//alert('tea:' + isTeaWanted);
+//alert('tea:' + isTeaWanted);*/
 
 
 /*Напишите код, выполнив задание из каждого пункта отдельной строкой:
@@ -166,11 +178,11 @@ console.log(carFromJson);
 Измените значение свойства name на Pete.
 Удалите свойство name из объекта.*/
 
-let user = {};
+/*let user = {};
 user.name = "John";
 user.surname = "Smith";
 user.name = "Pate";
-delete user.name;
+delete user.name;*/
 
 
 //Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
@@ -339,4 +351,77 @@ alert(randomInteger(1, 100));
 alert(randomInteger(1, 100));
 alert(randomInteger(1, 100));*/
 
+/*let users = [
+   { age: 16 },
+   { age: 22 },
+   { age: 21 },
+   { age: 15 },
+   { age: 34 },
+   { age: 31 },
+   { age: 25 },
+];
 
+let army = {
+   minAge: 18,
+   maxAge: 28,
+   canJoin(user) {
+      return user.age >= this.minAge && user.age < this.maxAge;
+   }
+};
+
+let soldiers = users.filter(army.canJoin, army);
+
+alert(soldiers.length);
+alert(soldiers[0].age);
+alert(soldiers[1].age);
+alert(soldiers[2].age);*/
+
+//Напишите функцию filterRangeInPlace(arr, a, b), которая принимает массив arr и удаляет 
+//из него все значения кроме тех, которые находятся между a и b. То есть, проверка имеет вид a ≤ arr[i] ≤ b.
+//Функция должна изменять принимаемый массив и ничего не возвращать.
+
+/*function filterRangeInPlace(arr, a, b) {
+   for (let i = 0; i < arr.length; i++) {
+      let val = arr[i];
+      if (val < a || val > b) {
+         arr.splice(i, 1);
+         i--;
+      }
+   }
+}
+
+let arr = [5, 3, 8, 1];
+filterRangeInPlace(arr, 1, 4);
+alert(arr);*/
+
+
+/*function sortByAge(arr) {
+   arr.sort((a, b) => a.age > b.age ? 1 : -1);
+}
+
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let arr = [vasya, petya, masha];
+
+sortByAge(arr);
+
+alert(arr[0].name);
+alert(arr[1].name);
+alert(arr[2].name);*/
+
+
+/*function getAverageAge(users) {
+   return users.reduce((prev, user) => prev + user.age, 0) / users.length;
+}
+
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+let kolya = { name: "Коля", age: 24 };
+let oleg = { name: "Олег", age: 22 };
+
+let arr = [vasya, petya, masha, kolya, oleg];
+
+alert(getAverageAge(arr));*/
