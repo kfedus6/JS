@@ -425,3 +425,58 @@ let oleg = { name: "Олег", age: 22 };
 let arr = [vasya, petya, masha, kolya, oleg];
 
 alert(getAverageAge(arr));*/
+
+
+//Напишите функцию getLastDayOfMonth(year, month), возвращающую последнее число месяца.Иногда это 30, 31 или даже февральские 28 / 29.
+//Параметры:
+//year – год из четырёх цифр, например, 2012.
+//month – месяц от 0 до 11.
+//К примеру, getLastDayOfMonth(2012, 1) = 29(високосный год, февраль).
+
+/*function getLastDayOfMonth(year, month) {
+   let date = new Date(year, month + 1, 0);
+   return date.getDate();
+}
+
+alert(getLastDayOfMonth(2021, 0));
+alert(getLastDayOfMonth(2021, 1));
+alert(getLastDayOfMonth(2021, 2));
+alert(getLastDayOfMonth(2021, 3));*/
+
+//Напишите функцию formatDate(date), форматирующую date по следующему принципу:
+//Если спустя date прошло менее 1 секунды, вывести "прямо сейчас".
+//В противном случае, если с date прошло меньше 1 минуты, вывести "n сек. назад".
+//В противном случае, если меньше часа, вывести "m мин. назад".
+//В противном случае, полная дата в формате "DD.MM.YY HH:mm". А именно: "день.месяц.год часы:минуты", всё в виде двух цифр, т.е. 31.12.16 10:00.
+
+
+/*function formatDate(date) {
+   let diff = new Date() - date;//різниця в мілісикундах!!!
+   if (diff < 1000) { //менше 1 секунди!!!
+      return 'прямо зарас';
+   }
+   let sec = Math.floor(diff / 1000); //різниця в секунду!!!
+   if (sec < 60) {
+      return sec + ' секунд назад';
+   }
+   let min = Math.floor(diff / 60000);//різниця в хвилину!!!
+   if (min < 60) {
+      return min + ' хвилин назад'
+   }
+   //добавити 0 до дню.місяцю.годині.хвилині.секунді!!!
+   let d = date;
+   d = [
+      '0' + d.getDate(),
+      '0' + (d.getMonth() + 1),
+      '' + d.getFullYear(),
+      '0' + d.getHours(),
+      '0' + d.getMinutes()
+   ].map(component => component.slice(-2));//взяти 2 остані цифри з компонента!!!
+   //зєднанти компоненти в дату!!!
+   return d.slice(0, 3).join('.') + ' ' + d.slice(3).join(':');
+}
+
+alert(formatDate(new Date(new Date - 1)));
+alert(formatDate(new Date(new Date - 30 * 1000)));
+alert(formatDate(new Date(new Date - 5 * 60 * 1000)));
+alert(formatDate(new Date(new Date - 86400 * 1000)));*/
