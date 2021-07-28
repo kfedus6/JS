@@ -480,3 +480,84 @@ alert(formatDate(new Date(new Date - 1)));
 alert(formatDate(new Date(new Date - 30 * 1000)));
 alert(formatDate(new Date(new Date - 5 * 60 * 1000)));
 alert(formatDate(new Date(new Date - 86400 * 1000)));*/
+
+
+//Есть объект salaries с произвольным количеством свойств, содержащих заработные платы.
+//Напишите функцию sumSalaries(salaries), которая возвращает сумму всех зарплат с помощью метода Object.values и цикла for..of.
+//Если объект salaries пуст, то результат должен быть 0.
+
+/*function sumSalaries(salaries) {
+   let sum = 0;
+   for (let salary of Object.values(salaries)) {
+      sum += salary
+   }
+   return sum;
+}
+
+let salaries = {
+   "John": 100,
+   "Pete": 300,
+   "Mary": 250,
+};
+
+alert(sumSalaries(salaries));*/
+
+
+//Напишите функцию count(obj), которая возвращает количество свойств объекта:
+
+/*function count(obj) {
+   return Object.keys(obj).length;
+}
+
+let user = {
+   name: "kolya",
+   age: 25
+};
+
+alert(count(user));*/
+
+
+/*let messages = [
+   { text: "Hello", from: "Kolya" },
+   { text: "How goes?", from: "Kolya" },
+   { text: "See you soon", from: "Alice" }
+];
+
+let weakWap = new WeakWap();
+
+//робим список не прочитаних смс!!!
+function noReadMessage(arr) {
+   for (let item of arr) {
+      weakWap.set(item, false);
+   };
+};
+
+// пррипустимо статус смс прочитаний!!!
+let readsMessage = [
+   { text: "Hello", from: "Kolya" },
+   { text: "See you soon", from: "Alice" }
+];
+
+//міняєм статус на прочитаний!!!
+function yesReadMessage(arr) {
+   for (let item of arr) {
+      weakWap.set(item, true);
+   };
+};
+
+//провіряємо і ведиляємо з масиву смс, всі прочитані!!!
+function readMessage(arr) {
+   for (let mess = 0; mess < arr.length; mess++) {
+      if (weakWap.has(arr[mess])) arr.splice(mess, 1);
+   };
+};
+
+console.log(noReadMessage(messages));
+console.log(yesReadMessage(readsMessage));
+console.log(readMessage(message));
+
+//провірямо для залишилось не прочитані смс або які не прочитані!!!
+for (let item of messages) {
+   alert(item.from);
+};*/
+
