@@ -547,3 +547,24 @@ printNumbers(5, 10);*/
 }
 
 printNumbers(5, 10);*/
+
+//TIME
+
+/*const startTime = new Date();
+const timeLimitSec = 10;
+const countDownContainer = document.querySelector('.countdown');
+function countdown() {
+   const now = new Date();
+   const diff = timeLimitSec - Math.round((now - startTime) / 1000);
+   countDownContainer.innerText = diff;
+   document.querySelector('body').style.opacity = diff / timeLimitSec;
+}
+setInterval(countdown, 1000);*/
+
+/*function updateClock() {
+   const clock = document.querySelector('.clock');
+   clock.innerText = new Date().toLocaleTimeString();
+   clock.classList.add('highlight')
+}
+
+setInterval(updateClock, 1000);*/
